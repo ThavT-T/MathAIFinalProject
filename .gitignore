@@ -1,0 +1,6 @@
+# Model weights and large data arrays
+*.pt
+*.npz
+
+# macOS
+.DS_Store

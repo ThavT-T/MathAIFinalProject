@@ -4,11 +4,11 @@
     "add",
     "mul"
   ],
-  "train_frac": 0.3,
+  "train_frac": 0.5,
   "threshold": 0.99,
   "grok_epochs": {
-    "add": -1,
-    "mul": -1
+    "add": 29400,
+    "mul": 29800
   },
-  "cogrokking_confirmed": false
+  "cogrokking_confirmed": true
 }
