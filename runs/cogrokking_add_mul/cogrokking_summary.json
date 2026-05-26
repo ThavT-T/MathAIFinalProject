@@ -1,0 +1,14 @@
+{
+  "p": 113,
+  "operations": [
+    "add",
+    "mul"
+  ],
+  "train_frac": 0.3,
+  "threshold": 0.99,
+  "grok_epochs": {
+    "add": -1,
+    "mul": -1
+  },
+  "cogrokking_confirmed": false
+}
