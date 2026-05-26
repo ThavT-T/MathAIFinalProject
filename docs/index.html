@@ -356,6 +356,7 @@
   <a href="#phases">Phases</a>
   <a href="#scarcity">Data Scarcity</a>
   <a href="#multiplication">Multiplication</a>
+  <a href="#cogrokking">Co-Grokking</a>
   <a href="#alignment">Alignment Essay</a>
 </nav>
 
@@ -570,7 +571,48 @@
     </div>
   </section>
 
-  <!-- ── SECTION 6: ALIGNMENT ESSAY ── -->
+  <!-- ── SECTION 6: CO-GROKKING ── -->
+  <section id="cogrokking">
+    <div class="section-label">Task 7</div>
+    <h2>Co-Grokking: Multi-Task Generalisation</h2>
+    <p>
+      When a single transformer is trained on <em>both</em> addition and multiplication simultaneously, does it generalise to each task independently, or do both tasks cross the generalisation threshold at the same time? We call the latter <strong>co-grokking</strong>, and it is a strong test of the mechanistic account of grokking.
+    </p>
+    <p>
+      The experiment uses the same architecture and hyperparameters as the control runs, with a combined dataset of addition and multiplication pairs interleaved. Each task gets its own operation token (<code>p+0</code> for addition, <code>p+1</code> for multiplication), so the model must learn to dispatch on the token while sharing all other weights.
+    </p>
+
+    <div class="callout">
+      <strong>Prediction from the mechanistic account</strong>
+      If grokking is caused by weight decay globally eroding the memorised solution, then both tasks should grok simultaneously — because weight decay acts on shared parameters and the cleanup phase is not task-specific.
+    </div>
+
+    <figure>
+      <img src="assets/cogrokking_overview.png" alt="Co-grokking overview: loss and accuracy for both tasks">
+      <figcaption>Fig. 6 — Top: per-task test loss (log scale). Bottom: per-task test accuracy. Dashed vertical lines mark the epoch at which each task first crosses 99% accuracy. Co-grokking is confirmed when these lines coincide.</figcaption>
+    </figure>
+
+    <div class="grid-2">
+      <figure>
+        <img src="assets/cogrokking_losses.png" alt="Per-task test loss curves">
+        <figcaption>Fig. 6a — Per-task test loss. Both tasks collapse from high loss to near-zero within a narrow epoch window.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/cogrokking_accuracy.png" alt="Per-task test accuracy curves">
+        <figcaption>Fig. 6b — Per-task test accuracy. The simultaneous jump to near-perfect accuracy on both tasks is the co-grokking signature.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Why Co-Grokking Happens</h3>
+    <p>
+      The result is non-trivial because addition and multiplication require structurally different internal circuits: addition uses a direct Fourier clock representation, while multiplication uses the discrete-log reduction that converts multiplication into addition in log-space. Despite this structural difference, both circuits form and are "revealed" at approximately the same epoch.
+    </p>
+    <p>
+      The mechanistic explanation is that the cleanup phase is driven by weight decay eroding the high-norm memorised solution — and weight decay acts globally on all shared parameters. Once the memorised components are weak enough, <em>both</em> Fourier circuits (which are lower-norm) take over simultaneously. Co-grokking is not evidence that the model learned both tasks at the same time; it is evidence that both circuits were already formed during Phase II, and that the global weight regularisation revealed them together.
+    </p>
+  </section>
+
+  <!-- ── SECTION 7: ALIGNMENT ESSAY ── -->
   <section id="alignment">
     <div class="section-label">Task 5 — Essay</div>
     <h2>Mechanistic Interpretability as the Diagnostic Tool of AI Alignment</h2>
