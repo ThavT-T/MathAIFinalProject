@@ -1,0 +1,102 @@
+{
+  "embedding_top_components": [
+    {
+      "component": "cos 25",
+      "norm": 4.543097463863413
+    },
+    {
+      "component": "sin 25",
+      "norm": 4.521496144810588
+    },
+    {
+      "component": "cos 6",
+      "norm": 4.261886387300955
+    },
+    {
+      "component": "sin 17",
+      "norm": 4.18619230229306
+    },
+    {
+      "component": "sin 6",
+      "norm": 4.141813848797849
+    },
+    {
+      "component": "cos 17",
+      "norm": 4.097237499437909
+    },
+    {
+      "component": "cos 26",
+      "norm": 3.9883205208683226
+    },
+    {
+      "component": "sin 26",
+      "norm": 3.9665545869477694
+    },
+    {
+      "component": "sin 33",
+      "norm": 2.1083527573953615
+    },
+    {
+      "component": "sin 34",
+      "norm": 2.007426552158358
+    },
+    {
+      "component": "cos 34",
+      "norm": 1.8147340897327182
+    },
+    {
+      "component": "sin 12",
+      "norm": 1.794991709254516
+    }
+  ],
+  "mlp_sum_top_frequencies": [
+    {
+      "frequency": 25,
+      "norm": 568.3514236807424
+    },
+    {
+      "frequency": 6,
+      "norm": 421.0715907447438
+    },
+    {
+      "frequency": 17,
+      "norm": 392.05907821094195
+    },
+    {
+      "frequency": 26,
+      "norm": 352.17915286301593
+    },
+    {
+      "frequency": 50,
+      "norm": 103.62176131673431
+    },
+    {
+      "frequency": 12,
+      "norm": 72.17152419356893
+    },
+    {
+      "frequency": 52,
+      "norm": 64.8173190812111
+    },
+    {
+      "frequency": 34,
+      "norm": 59.611086582875046
+    },
+    {
+      "frequency": 38,
+      "norm": 38.40273299933096
+    },
+    {
+      "frequency": 18,
+      "norm": 26.3602562956618
+    },
+    {
+      "frequency": 51,
+      "norm": 22.819974224064858
+    },
+    {
+      "frequency": 33,
+      "norm": 21.413411934566863
+    }
+  ]
+}

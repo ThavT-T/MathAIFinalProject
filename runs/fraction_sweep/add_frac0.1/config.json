@@ -1,0 +1,26 @@
+{
+  "config": {
+    "p": 113,
+    "operation": "add",
+    "train_frac": 0.1,
+    "seed": 0,
+    "d_model": 128,
+    "n_heads": 4,
+    "d_mlp": 512,
+    "n_ctx": 3,
+    "activation": "relu",
+    "lr": 0.001,
+    "weight_decay": 1.0,
+    "epochs": 80000,
+    "batch_size": 0,
+    "eval_every": 100,
+    "save_every": 1000,
+    "stop_at_acc": 0.95,
+    "out_dir": "runs/fraction_sweep",
+    "run_name": "add_frac0.1",
+    "device": "cuda"
+  },
+  "operations": [
+    "add"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "p": 113,
+  "primitive_root": 3,
+  "overall_acc": 0.9998433589935303,
+  "test_acc": 0.9997762441635132,
+  "zero_case_rule_acc": 1.0,
+  "nonzero_discrete_log_rule_acc": 0.9998405612244898,
+  "interpretation": "For nonzero residues modulo a prime, multiplication is addition in discrete-log coordinates: log_g(x*y) = log_g(x) + log_g(y) mod p-1. High nonzero_discrete_log_rule_acc indicates the model's predictions follow this algorithm; high zero_case_rule_acc indicates it separately handles x=0 or y=0."
+}
